@@ -45,7 +45,7 @@ def get_stats(message):
     else:
         reply_message = "- Top flooders:\n"
         for i, item in enumerate(result):
-            reply_message += f"[{i + 1}] {item[1].strip()} ({item[0]}) : {item[2]} messages.\n"
+            reply_message += f"[{i + 1}] {item[1]} ({item[0]}) : {item[2]} messages.\n"
         bot.reply_to(message, reply_message)
 
     update_messages_count(message.from_user.id)
